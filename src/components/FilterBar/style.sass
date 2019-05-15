@@ -1,0 +1,191 @@
+$colorLiGray: #e5e5e5
+$colorGray: #aaaaaa
+$colorBlack: #666666
+$colorYellow: #ffaf0a
+$colorOrange: #ff712e
+*
+  // border: 1px solid #000
+.filterBar
+  // 共用
+  .title
+    font-size: 18px
+    font-weight: 500
+    letter-spacing: 6px
+    padding-bottom: 12px
+    color: $colorBlack
+  .select        
+    position: relative
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      top: 50%
+      right: 10px
+      width: 5px
+      height: 5px
+      border: solid $colorOrange
+      border-width: 2px 2px 0 0
+      transform: translateY(-50%) rotate(45deg)
+      -webkit-transform: translateY(-50%) rotate(45deg)
+      -moz-transform: translateY(-50%) rotate(45deg)
+      -ms-transform: translateY(-50%) rotate(45deg)
+    select
+      appearance: none
+      background-color: white
+      border: 1px solid $colorYellow
+      width: 100%
+      height: 48px 
+      font-size: 16px
+      padding-left: 10px
+      color: #8c8c8c
+      &.small
+        background-color: #fff9ea
+  .checkbox
+    display: flex
+    align-items: center
+    position: relative
+    margin-bottom: 10px
+    cursor: pointer  
+    input:checked ~ .box
+      background-color: $colorYellow
+    input
+      opacity: 0
+      width: 0
+      height: 0
+      position: absolute
+      cursor: pointer
+    .box
+      width: 18px
+      height: 18px
+      border-radius: 2px
+      margin-right: 8px
+      transition: 0.1s
+      -moz-transition: 0.1s
+      -webkit-transition: 0.1s
+      -o-transition: 0.1s 
+      border: 1px solid $colorYellow
+      &:hover
+        background-color: $colorYellow
+    .box-title
+      font-size: 1rem
+      letter-spacing: 1px
+      color: #8c8c8c
+// 大螢幕
+.lg
+  width: 30%
+  height: 400px
+  border: 1px solid $colorYellow
+  border-radius: 5px
+  background-color: white
+  // margin-top: 26px
+  .topic
+    text-align: center
+    background-color: $colorYellow
+    padding: 12px 0
+    span
+      font-size: 1.25rem
+      font-weight: 300
+      color: white
+      padding: 0 4px
+  .filter-inner
+    padding: 30px 20px 0
+    .filter-area
+      margin-bottom: 30px 
+// 小螢幕
+.sm
+  display: none
+  .btn
+    position: absolute
+    border-radius: 5px
+    top: 16px
+    right: 0
+    padding: 6px 16px
+    color: $colorYellow
+    border: 2px solid $colorYellow
+    cursor: pointer
+    font-size: 14px
+    font-weight: 600
+    span
+      padding: 0 4px
+  // 左側nav bar
+  .filter-panel
+    background-color: #fff9ea
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 300000
+    width: 300px
+    right: -300px
+    height: 100vh
+    box-shadow: -5px 0px 10px rgba(black,0.1)
+    transition: all 0.3s
+    &.show
+      right: 0px
+    .cross
+      position: absolute
+      right: 20px
+      top: 20px
+      color: $colorYellow
+      font-size: 20px
+      font-weight: 200
+      cursor: pointer
+    .filter-inner
+      width: 100%
+      padding: 150px 20px
+      .topic
+        text-align: center
+        padding: 12px 0
+        margin-bottom: 30px
+        position: relative
+        &:after
+          display: block
+          content: ''
+          width: 100%
+          height: 1px
+          position: absolute
+          bottom: 0
+          background-color: $colorYellow
+        span
+          color: $colorYellow
+          font-size: 1.25rem
+          padding: 0 4px
+      .filter-area
+        margin-bottom: 30px
+
+@media screen and(min-width: 1401px)
+  .filterBar>.lg
+    width: 280px
+    margin-right: 80px
+
+@media screen and(min-width: 1100px) and (max-width: 1400px)
+  .filterBar>.lg
+    width: 280px
+    margin-right: 40px
+
+@media screen and(min-width: 960px) and (max-width: 1099px)
+  .filterBar>.lg
+    width: 240px
+    margin-right: 30px
+
+@media screen and(min-width: 800px) and (max-width: 961px)
+  .filterBar>.lg
+    width: 200px
+    margin-right: 25px
+
+@media screen and(max-width: 799px) 
+  .filterBar
+    .lg
+      display: none
+    .sm
+      display: block
+@media screen and(max-width: 549px) 
+  .filterBar
+    .sm
+      .btn
+        top: 8px
+      
+
+            
+
+          
+      

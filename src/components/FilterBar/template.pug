@@ -1,0 +1,53 @@
+.filterBar
+  .lg
+    .topic 
+      span 篩
+      span 選
+      span 條
+      span 件
+    .filter-inner
+      .filter-area
+        .title 區域
+        .select
+          select(v-model="ZONE")
+            option(:value="null") 請選擇
+            option(v-for="item in zoneArr"
+                    :value="item") {{ item }}
+      .filter-area
+        .title 分類
+        label.checkbox(v-for="item in ticketInfoo" 
+                        :key="item")
+          input(type="checkbox"
+                :value="item"
+                v-model="TICKET")
+          span.box
+          .box-title {{ item }}
+  .sm
+    .btn(@click="show=!show") 
+      span 篩
+      span 選
+    .filter-panel(:class="{show: show}")
+      .cross(@click="show=!show") 
+        i.fas.fa-times
+      .filter-inner
+        .topic
+          span 篩
+          span 選
+          span 條
+          span 件
+        .filter-area
+          .title 區域
+          .select
+            select.small(v-model="ZONE")
+              option(:value="null") 請選擇
+              option(v-for="item in zoneArr"
+                      :value="item") {{ item }}
+        .filter-area
+          .title 分類
+          label.checkbox(v-for="item in ticketInfoo" 
+                          :key="item")
+            input(type="checkbox"
+                  :value="item"
+                  v-model="TICKET")
+            span.box
+            .box-title {{ item }}
