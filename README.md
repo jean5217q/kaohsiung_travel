@@ -1,26 +1,14 @@
-# Filter
+# Kaohsiung Travel
+Web Link: https://jean5217q.github.io/kaohsiung_travel/
+## Technologies
 
-## Project setup
-```
-npm install
-```
+* Sass
+* RWD
+* Vue
+* Vuex
+* Vue router
+* AJAX
+* Ui Design
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+![homepage](https://raw.github.com/jean5217q/kaohsiung_travel/master/screenshot/homepage.png)
